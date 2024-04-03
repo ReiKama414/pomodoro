@@ -3,6 +3,13 @@ import React, { useState, useRef, useEffect } from "react";
 // Component
 import LeftSideBar from "./components/LeftSideBar";
 
+// Style
+import "./app.sass";
+
+// Image
+import greenTomatoImage from "./assets/images/tomato--green.svg";
+import orangeTomatoImage from "./assets/images/tomato--orange.svg";
+
 const App = () => {
 	const leftSideBarRef = useRef(null);
 	// LeftSideBar 元件的狀態和函數
@@ -35,13 +42,18 @@ const App = () => {
 	}, []);
 
 	return (
-		<div className="relative h-screen flex flex-row justify-start">
+		<div className="relative h-screen flex flex-row justify-start overflow-hidden">
 			{/* Left SideBar */}
 			<div ref={leftSideBarRef}>
 				<LeftSideBar toggle={toggle} handdleToggle={handdleToggle} ToggleStatus={ToggleStatus} />
 			</div>
 			{/* Main Content */}
-			<div>123456</div>
+			<div className="relative ">
+				{/* Tomato */}
+				<div className="absolute bottom-0 md:px-[20vw] px-[10vw] main-wrapper">
+					<img src={orangeTomatoImage} className="w-full" alt={"little tomato - Orange"} />
+				</div>
+			</div>
 		</div>
 	);
 };
