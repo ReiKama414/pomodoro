@@ -6,6 +6,7 @@ module.exports = {
 			colors: {
 				customBg: "#304030",
 				customText: "#E8E8E8",
+				customPrimary: "#F08448",
 			},
 		},
 	},

@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 
 // Component
-import LeftSideBar from "./components/LeftSideBar";
-import MainContent from "./components/MainCotent";
+import LeftSideBar from "./components/layout/LeftSideBar";
+import MainContent from "./components/layout/MainCotent";
 
 // Style
 import "./app.sass";
