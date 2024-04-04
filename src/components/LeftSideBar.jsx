@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // Icon
 import listIcon from "../assets/icons/icon-list.svg";
@@ -15,7 +15,7 @@ import analysisIcon from "../assets/icons/icon-analysis.svg";
 const LeftSideBar = ({ toggle, handdleToggle, ToggleStatus }) => {
 	return (
 		<div
-			className={`relative h-screen bg-light flex items-start ${
+			className={`relative h-screen bg-customBg flex items-start ${
 				toggle === ToggleStatus.CLOSED ? "md:w-20 w-10" : "md:w-[50vw] w-[100vw]"
 			} duration-300 shadow-[0_0_40px_#0000003D]`}>
 			<div className="flex flex-col items-center justify-center md:w-20 w-10 h-full relative bg-customText md:gap-0 gap-3">
@@ -25,7 +25,7 @@ const LeftSideBar = ({ toggle, handdleToggle, ToggleStatus }) => {
 					onClick={() => {
 						handdleToggle(ToggleStatus.LIST);
 					}}>
-					<img src={listIcon} className="md:w-fit w-full p-1 aspect-square" alt={"Analysis Icon"} />
+					<img src={listIcon} className="md:w-fit w-full p-1 aspect-square" alt={"List Icon"} />
 				</button>
 				<button
 					type="button"

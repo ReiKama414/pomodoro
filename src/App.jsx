@@ -2,13 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 
 // Component
 import LeftSideBar from "./components/LeftSideBar";
+import MainContent from "./components/MainCotent";
 
 // Style
 import "./app.sass";
-
-// Image
-import greenTomatoImage from "./assets/images/tomato--green.svg";
-import orangeTomatoImage from "./assets/images/tomato--orange.svg";
 
 const App = () => {
 	const leftSideBarRef = useRef(null);
@@ -44,15 +41,12 @@ const App = () => {
 	return (
 		<div className="relative h-screen flex flex-row justify-start overflow-hidden">
 			{/* Left SideBar */}
-			<div ref={leftSideBarRef}>
+			<div ref={leftSideBarRef} className="z-[1024]">
 				<LeftSideBar toggle={toggle} handdleToggle={handdleToggle} ToggleStatus={ToggleStatus} />
 			</div>
 			{/* Main Content */}
-			<div className="relative ">
-				{/* Tomato */}
-				<div className="absolute bottom-0 md:px-[20vw] px-[10vw] main-wrapper">
-					<img src={orangeTomatoImage} className="w-full" alt={"little tomato - Orange"} />
-				</div>
+			<div className="relative flex-1">
+				<MainContent />
 			</div>
 		</div>
 	);

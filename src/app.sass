@@ -3,6 +3,18 @@
   width: calc( 100vw - var(--mw-w))
   min-width: calc( 100vw - var(--mw-w))
 
+.button-hover-animation
+  transition: transform 0.2s ease-in-out
+  &:hover
+    animation: rotate-animation 0.5s alternate
+
+@keyframes rotate-animation
+  0%
+    transform: rotate(30deg)
+  50%
+    transform: rotate(-30deg)
+  100%
+    transform: rotate(0deg)
 
 @media (max-width: 767.98px)
   .main-wrapper
